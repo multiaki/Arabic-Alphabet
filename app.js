@@ -39,11 +39,22 @@ app.use(express.static(__dirname + "/public"));
 
 //Render Index page
 app.get("/", function (req, res) {
-	res.render("index", {
+	res.render("register", {
 		title: "Welcome"
 	});
 });
 
+app.get("/register", function (req, res) {
+	res.render("register", {
+		title: "Register"
+	});
+});
+
+app.get("/login", function (req, res) {
+	res.render("login", {
+		title: "Login"
+	});
+});
 
 app.listen(portnumber);
 
