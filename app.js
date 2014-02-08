@@ -37,16 +37,19 @@ app.use(stylus.middleware({
 
 app.use(express.static(__dirname + "/public"));
 
-//Render Index page
-app.get("/", function (req, res) {
+app.get("/register", function (req, res) {
 	res.render("register", {
-		title: "Welcome"
+		title: "Register",
+		scripts: ['./js/register.js']
 	});
 });
 
-app.get("/register", function (req, res) {
-	res.render("register", {
-		title: "Register"
+app.post("/register", function (req, res) {
+	
+	res.render("thank-you-for-registering", {
+		title: "Thank You for registering",
+		username: "Aki Sharipov",
+		useremail: "aki@multiaki.com"
 	});
 });
 
@@ -56,6 +59,19 @@ app.get("/login", function (req, res) {
 	});
 });
 
+//Render Index page
+app.get("/", function (req, res) {
+	res.render("register", {
+		title: "Welcome"
+	});
+});
+
+//Render Index page
+app.get("*", function (req, res) {
+	res.render("404", {
+		title: "Welcome"
+	});
+});
 app.listen(portnumber);
 
 console.log("Server is now running on port " + portnumber);

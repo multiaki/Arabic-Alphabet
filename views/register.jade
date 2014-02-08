@@ -5,7 +5,7 @@ block content
 			| Register
 	p.call-action-txt
 		| Please register to start learning
-	form(action='#', method='post')
+	form#register(action='/register', method='post')
 		div.input-field-wrapper
 			label.form-label
 				| Fullname
@@ -29,6 +29,6 @@ block content
 			| Already registered?
 			span
 				| Login
-block sidebar
-	.sidebar
-		h1 this is sidebar
+				
+- each s in scripts
+	script(src=s)

@@ -3,14 +3,25 @@ html
 	head
 		title #{title} - Arabic alphabet
 		link(rel="stylesheet", href="/css/styles.css")
-
+		script(src='//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.0/jquery.min.js')
+		//script(src='//cdnjs.cloudflare.com/ajax/libs/backbone.js/1.1.0/backbone-min.js')
+		script(src='//cdn.jsdelivr.net/parse/1.2.9/parse.min.js')
+		script(src='//connect.facebook.net/en_US/all.js')
+		script(type='text/javascript', src= "./js/register.js")
+		script(type='text/javascript', src= "./js/parse-app.js")
+		
 	body
-		#primary-container.clearfix
-			#game-wrapper.clearfix
-				#content-wrapper.clearfix
+		.primary-container.clearfix
+			.game-wrapper.clearfix
+				.content-wrapper.clearfix
 					block content
-			#sidebar.clearfix
+			.sidebar.clearfix
 				block sidebar
+					include ./include/sidebar.jade
 			footer
 				.container
 					p Copyright &copy; 2014
+		#fb-root
+		
+		script.
+			parseInt.init()
