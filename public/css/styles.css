@@ -1,0 +1,375 @@
+/*
+ * Import Nib
+ */
+/*
+ * Nib Reset File
+ */
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-weight: inherit;
+  font-style: inherit;
+  font-family: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+body {
+  line-height: 1;
+  color: #000;
+  background: #fff;
+}
+ol,
+ul {
+  list-style: none;
+}
+table {
+  border-collapse: separate;
+  border-spacing: 0;
+  vertical-align: middle;
+}
+caption,
+th,
+td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+a img {
+  border: none;
+}
+/*
+ * Set Variables
+ */
+input:hover {
+  background-color: rgba(123,214,96,0.5);
+}
+::-webkit-input-placeholder {
+/* WebKit browsers */
+  color: #fff;
+  font-size: 0.8em;
+  font-weight: normal;
+  font-style: italic;
+  padding-top: 5px;
+}
+:-moz-placeholder {
+/* Mozilla Firefox 4 to 18 */
+  color: #fff;
+  font-size: 0.8em;
+  font-weight: normal;
+  font-style: italic;
+  padding-top: 5px;
+}
+::-moz-placeholder {
+/* Mozilla Firefox 19+ */
+  color: #fff;
+  font-size: 0.8em;
+  font-weight: normal;
+  font-style: italic;
+  padding-top: 5px;
+}
+:-ms-input-placeholder {
+/* Internet Explorer 10+ */
+  color: #fff;
+  font-size: 0.8em;
+  font-weight: normal;
+  font-style: italic;
+  padding-top: 5px;
+}
+#game-wrapper {
+  height: 1024px;
+  width: 768px;
+  margin: 0px;
+  border: 1px solid rgba(104,163,179,0.541);
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+  position: relative;
+  background: url("../img/bg.jpg");
+  background-repeat: no-repeat;
+  background-position: bottom left;
+  background-attachment: scroll;
+  -webkit-background-size: auto;
+  -moz-background-size: auto;
+  background-size: auto;
+  float: left;
+  overflow: hidden;
+}
+#sidebar {
+  float: right;
+  height: 1024px;
+  margin: 0px;
+  clear: none;
+  width: 400px;
+  background: #e3f9ff;
+  border: 1px solid rgba(104,163,179,0.541);
+}
+#primary-container {
+  float: none;
+  margin: 40px auto 0;
+  clear: none;
+  width: 1200px;
+  max-width: 1200px;
+  min-width: 768px;
+  padding: 0px;
+}
+#content-wrapper {
+  float: none;
+  height: 786px;
+  margin: 80px auto 0;
+  clear: none;
+  width: 616px;
+  position: relative;
+  top: 0px;
+  left: 0px;
+  background-image: url("../img/registerpanel.png");
+  background-position: 0% 50px;
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  -webkit-background-size: auto;
+  -moz-background-size: auto;
+  background-size: auto;
+  padding-top: 0px;
+}
+.input-field-wrapper {
+  float: none;
+  height: 110px;
+  display: block;
+  text-align: left;
+  margin: 20px auto 0;
+  clear: none;
+  width: 80%;
+  background-image: url("../img/input-field.png");
+  background-position: 0% 0%;
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  -webkit-background-size: auto;
+  -moz-background-size: auto;
+  background-size: auto;
+}
+.input-field {
+  float: none;
+  height: auto;
+  padding: 3px 10px;
+  font-size: 1.2em;
+  display: block;
+  background-color: rgba(255,0,0,0);
+  margin-top: 10px;
+  margin-left: 0;
+  clear: none;
+  margin-right: auto;
+  margin-bottom: 0px;
+  font-family: aw-conqueror-carved-one;
+  color: #fff;
+  border: 1px solid #68a3b3;
+  width: 95%;
+}
+.form-label {
+  float: none;
+  font-size: 1.5em;
+  width: 90%;
+  height: auto;
+  text-align: left;
+  font-weight: 900;
+  line-height: normal;
+  padding-top: 10px;
+  padding-bottom: 3px;
+  padding-left: 3px;
+  padding-right: 3px;
+  display: block;
+  min-height: 0px;
+  margin-top: 10px;
+  margin-left: auto;
+  clear: none;
+  margin-right: auto;
+  margin-bottom: 0px;
+  font-style: italic;
+  color: #1a7739;
+  text-shadow: #fff 0px 0px 1px;
+  font-family: aw-conqueror-carved-one;
+  text-decoration: none;
+}
+.call-action-txt {
+  float: none;
+  font-size: 2em;
+  height: auto;
+  text-align: center;
+  font-weight: 900;
+  line-height: normal;
+  margin: 20px auto;
+  padding: 5px;
+  clear: none;
+  font-style: italic;
+  color: #1a7739;
+  text-shadow: #fff 1px 1px 3px;
+  font-family: aw-conqueror-carved-one;
+  text-decoration: none;
+}
+button.btn {
+  height: 80px;
+  margin: 0px;
+  clear: none;
+  background-position: 100% 0%;
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  background-color: rgba(229,233,232,0);
+  color: #fff;
+  border-top-style: none;
+  border-right-style: none;
+  border-bottom-style: none;
+  border-left-style: none;
+  font-family: aw-conqueror-carved-one;
+  font-style: normal;
+  font-weight: 900;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  display: block;
+  overflow: hidden;
+}
+button.register-btn {
+  float: right;
+  font-size: 2em;
+  background-image: url("../img/button.png");
+  width: 40%;
+  -webkit-background-size: 100% 200%;
+  -moz-background-size: 100% 200%;
+  background-size: 100% 200%;
+}
+button.facebook-btn {
+  float: left;
+  font-size: 1.5em;
+  background-image: url("../img/share-at-facebook-button.png");
+  -webkit-background-size: 100% 215%;
+  -moz-background-size: 100% 215%;
+  background-size: 100% 215%;
+  width: 60%;
+}
+.btn:hover {
+  cursor: pointer;
+  background-position: left 100%;
+}
+button.facebook-btn:hover {
+  background-position: left 92%;
+}
+.button-wrapper {
+  float: none;
+  height: auto;
+  margin-left: auto;
+  margin-top: 20px;
+  clear: none;
+  width: 80%;
+  margin-right: auto;
+}
+.logged-in-wrapper {
+  float: none;
+  height: auto;
+  margin: 20px auto;
+  clear: none;
+  width: 80%;
+}
+.logged-in-wrapper .logged-in-link {
+  float: right;
+  font-size: 1.5em;
+  margin: 25px 10px 0;
+  color: #1a7739;
+  font-family: aw-conqueror-carved-one;
+  font-style: normal;
+  font-weight: 700;
+  text-align: right;
+  display: block;
+  text-decoration: none;
+  font-style: italic;
+  text-shadow: #fff 1px 1px 3px;
+}
+.logged-in-wrapper .logged-in-link:hover {
+  color: #000;
+}
+.logged-in-wrapper .logged-in-link span {
+  display: block;
+  color: #5fa01b;
+}
+.logged-in-wrapper .logged-in-link span:hover {
+  color: #7c0202;
+}
+.ribbon-wrapper {
+  height: 110px;
+  margin: 3px auto;
+  width: 70%;
+  background-image: url("../img/ribon.png");
+  background-position: 0% 0%;
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  -webkit-background-size: auto;
+  -moz-background-size: auto;
+  background-size: auto;
+}
+.ribbon-wrapper p {
+  font-size: 2.5em;
+  text-align: center;
+  font-weight: 900;
+  line-height: normal;
+  margin-left: auto;
+  font-style: italic;
+  color: #fff;
+  text-shadow: #1a7739 1px 1px 3px;
+  font-family: aw-conqueror-carved-one;
+  text-decoration: none;
+  margin-right: auto;
+}
