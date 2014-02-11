@@ -2,26 +2,27 @@ extend layout
 block content
 	.ribbon-wrapper.clearfix
 		p
-			| Login
+			| Register
 	p.call-action-txt
-		| Please login to start learning
-	form(action='#', method='post')
+		| Please register to start learning
+	form#register(action='/register', method='post')
 		div.input-field-wrapper
-			label.form-label
+			label(for='email').form-label
 				| Email
-				input.input-field(type='text', placeholder='Your email')
+				input.input-field(type='text', placeholder='Your email', name='email', id='email')
 		div.input-field-wrapper
-			label.form-label
+			label(for='password').form-label
 				| Password
-				input.input-field(type='password', placeholder='Choose your password')
+				input.input-field(type='password', placeholder='Choose your password', name='password', id='password')
 
-		.button-wrapper.clearfix
-			button.facebook-btn.btn
-				| Facebook Login
-			button.register-btn.btn
-				| Login
+	.button-wrapper.clearfix
+		button.facebook-btn.btn
+			| Facebook Connect
+		button.register-btn.btn
+			| Register
 	.logged-in-wrapper.clearfix
-		a.logged-in-link(href='/register')
-			| Not a member yet?
+		a.logged-in-link(href='/login')
+			| Already registered?
 			span
-				| Register
+				| Login
+				

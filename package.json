@@ -1,19 +1,26 @@
 {
-  "name": "arabic",
-  "version": "0.0.2",
-  "description": "Learn arabic playing games",
-  "main": "app.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "dependencies": {
-  	"express":"*",
-  	"jade":"*",
-  	"nib":"*",
-  	"stylus":"*",
-    "mongodb":"*",
-    "monk":"*"
+	"name": "arabic",
+	"version": "0.0.2",
+	"description": "Learn arabic playing games",
+	"main": "app.js",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1"
 	},
-  "author": "Aki Sharipov",
-  "license": "GNU"
+	"dependencies": {
+		"express": "*",
+		"jade": "*",
+		"nib": "*",
+		"stylus": "*",
+		"mongodb": "*",
+		"monk": "*",
+		"underscore": "*",
+		"backbone": "*",
+		"hashlib": "*",
+		"routes ": "*",
+		"facebook ": "*",
+		"parse": "*",
+		"everyauth": "*"
+	},
+	"author": "Aki Sharipov",
+	"license": "GNU"
 }

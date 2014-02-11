@@ -1,8 +1,10 @@
 User = Backbone.Model.extend({
-	initialize: function(){
+	initialize: function () {
 		alert("Welcome to this world");
 	}
 });
-
-var user = new User();
-person.set({ name: "Thomas", age: 67});
+window.user = new User();
+window.user.set({
+	name: "Thomas",
+	age: 67
+});
