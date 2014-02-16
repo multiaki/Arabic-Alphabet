@@ -2,9 +2,9 @@ extend layout
 block content
 	.ribbon-wrapper.clearfix
 		p
-			| Register
+			| Login
 	p.call-action-txt
-		| Please register to start learning
+		| Please login to start learning
 	form#register(action='/register', method='post')
 		div.input-field-wrapper
 			label(for='email').form-label
@@ -17,12 +17,12 @@ block content
 
 	.button-wrapper.clearfix
 		button.facebook-btn.btn
-			| Facebook Connect
+			| Facebook Login
 		button.register-btn.btn
-			| Register
+			| Login
 	.logged-in-wrapper.clearfix
 		a.logged-in-link(href='/login')
-			| Already registered?
+			| Not a member yet?
 			span
-				| Login
+				| Register
 				

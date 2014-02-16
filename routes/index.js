@@ -1,5 +1,6 @@
 exports.index = function (req, res) {
 	res.render("index", {
-		title: "Welcome!",
+		title: "Welcome",
+		scripts: ['./js/facebook.js']
 	});
 };

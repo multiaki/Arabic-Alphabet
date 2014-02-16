@@ -24,6 +24,11 @@ function compile(str, path) {
 		.use(nib());
 }
 
+// development only
+if ('development' == app.get('env')) {
+  app.use(express.errorHandler());
+}
+
 //set view folder
 app.set("views", __dirname + "/views");
 
@@ -76,10 +81,18 @@ app.get("/facebook-register", function (req, res) {
 	});
 });
 
+
+app.get("/facebook-login", function (req, res) {
+	res.render("facebook-login", {
+		title: "Login with facebook",
+		scripts: ['./js/facebook-login.js'],
+	});
+});
+
 app.get("/login", function (req, res) {
 	res.render("login", {
 		title: "Login",
-		scripts: ['./js/login.js'],
+		scripts: ['./js/login.js', './js/facebook.js'],
 	});
 });
 
@@ -92,6 +105,8 @@ app.get("*", function (req, res) {
 		title: "Welcome"
 	});
 });
+
+
 app.listen(portnumber);
 
 console.log("Server is now running on port " + portnumber);

@@ -27,15 +27,3 @@ html
 		if(scripts)
 			- each s in scripts
 				script(src=s)
-		script. 
-			window.fbAsyncInit = function() {
-				Parse.FacebookUtils.init({
-					appId      : '650765618296184', // Facebook App ID
-					channelUrl : 'http://arabic.parseapp.com', // Channel File
-					status     : true, // check login status
-					cookie     : true, // enable cookies to allow Parse to access the session
-					xfbml      : true  // parse XFBML
-				});
-			
-			// Additional initialization code here
-			};
